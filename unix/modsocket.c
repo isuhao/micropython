@@ -441,7 +441,9 @@ STATIC const mp_map_elem_t mp_module_socket_globals_table[] = {
     C(SOCK_DGRAM),
     C(SOCK_RAW),
 
+#ifndef SYLIXOS
     C(MSG_DONTROUTE),
+#endif
     C(MSG_DONTWAIT),
 
     C(SOL_SOCKET),

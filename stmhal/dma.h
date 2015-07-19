@@ -3,8 +3,7 @@
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2014 Paul Sokolovsky
- * Copyright (c) 2015 Daniel Campora
+ * Copyright (c) 2015 Damien P. George
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,9 +23,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-#ifndef MODUHASHLIB_H_
-#define MODUHASHLIB_H_
 
-extern const mp_obj_module_t mp_module_uhashlib;
+extern const DMA_InitTypeDef dma_init_struct_spi_i2c;
 
-#endif // MODUHASHLIB_H_
+void dma_init(DMA_HandleTypeDef *dma, DMA_Stream_TypeDef *dma_stream, const DMA_InitTypeDef *dma_init, uint32_t dma_channel, uint32_t direction, void *data);
+void dma_deinit(DMA_HandleTypeDef *dma);
+void dma_invalidate_channel(DMA_Stream_TypeDef *dma_stream, uint32_t dma_channel);
